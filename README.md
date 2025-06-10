@@ -1,5 +1,6 @@
 # Klient Symfonia ERP WebAPI dla aplikacji Java
-
+### Symfonia ERP WebAPI Client for Java
+***
 [![Licencja: MIT](https://img.shields.io/badge/Licencja-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Wersja Java](https://img.shields.io/badge/Java-17%2B-blue)](https://www.java.com)
 
