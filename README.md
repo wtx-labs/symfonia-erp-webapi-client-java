@@ -3,7 +3,7 @@
 [![Licencja: MIT](https://img.shields.io/badge/Licencja-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Wersja Java](https://img.shields.io/badge/Java-17%2B-blue)](https://www.java.com)
 
-Lekka biblioteka kliencka w języku Java do integracji z Symfonia WebAPI. Stworzona dla programistów Java, którzy potrzebują zintegrować swoje aplikacje z systemem Symfonia ERP. 🚀
+Lekka biblioteka kliencka w języku Java do integracji z Symfonia WebAPI. Stworzona dla programistów Java, którzy potrzebują zintegrować swoje aplikacje z API systemu Symfonia ERP. 🚀
 
 Ten klient API zapewnia interfejsy Java dla Symfonia WebAPI, umożliwiając płynne zarządzanie:
 - Towarami i stanami magazynowymi
