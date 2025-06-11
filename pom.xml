@@ -3,7 +3,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>wtx.symfonia</groupId>
+	<groupId>pl.wtx.symfonia</groupId>
 	<artifactId>symfonia-erp-webapi-client</artifactId>
 	<version>0.1.0</version>
 	<packaging>jar</packaging>
@@ -88,7 +88,7 @@
 	                </descriptorRefs>
 	                <archive>
 	                    <manifest>
-	                        <mainClass>wtx.symfonia.SymfoniaErpWebApiClientUsageDemo</mainClass>
+	                        <mainClass>pl.wtx.symfonia.SymfoniaErpWebApiClientUsageDemo</mainClass>
 	                    </manifest>
 	                </archive>
 	                <appendAssemblyId>false</appendAssemblyId>

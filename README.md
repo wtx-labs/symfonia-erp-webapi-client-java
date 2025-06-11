@@ -88,7 +88,7 @@ Następnie dodaj zbudowany artefakt do swojego projektu:
 
 ```xml
 <dependency>
-    <groupId>wtx.symfonia</groupId>
+    <groupId>pl.wtx.symfonia</groupId>
     <artifactId>symfonia-erp-webapi-client</artifactId>
     <version>0.1.0</version>
 </dependency>
@@ -99,11 +99,11 @@ Następnie dodaj zbudowany artefakt do swojego projektu:
 Oto jak używać klienta Symfonia ERP WebAPI:
 
 ```java
-package wtx.symfonia;
+package pl.wtx.symfonia;
 
-import wtx.symfonia.api.client.SystemApi;
-import wtx.symfonia.api.client.invoker.ApiException;
-import wtx.symfonia.api.client.model.PingResponse;
+import pl.wtx.symfonia.api.client.SystemApi;
+import pl.wtx.symfonia.api.client.invoker.ApiException;
+import pl.wtx.symfonia.api.client.model.PingResponse;
 
 public class SymfoniaWebApiClientUsageDemo {
 
