@@ -5,11 +5,11 @@
 
 	<groupId>wtx.symfonia</groupId>
 	<artifactId>symfonia-erp-webapi-client</artifactId>
-	<version>0.1.0-alpha-20250610</version>
+	<version>0.1.0</version>
 	<packaging>jar</packaging>
 
 	<name>Symfonia ERP WebAPI Client</name>
-	<description>The Symfonia ERP WebAPI client enables quick and easy integration with applications using the Java language.</description>
+	<description>The Symfonia ERP WebAPI client</description>
 	<url>https://github.com/wtx-labs/symfonia-erp-webapi-client-java</url>
 
 	<properties>
