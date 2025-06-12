@@ -182,11 +182,11 @@ Klient udostępnia następujące główne interfejsy API:
 
 ## 🤝 Współpraca
 
-    ✨ Sprawdź nasze [GitHub Issues](https://github.com/wtx-labs/symfonia-erp-webapi-client-java/issues) po najnowsze aktualizacje
+- ✨ Sprawdź nasze [GitHub Issues](https://github.com/wtx-labs/symfonia-erp-webapi-client-java/issues) po najnowsze aktualizacje
 
-    💡 Masz sugestie? Otwórz zgłoszenie lub dołącz do projektu
+- 💡 Masz sugestie? Otwórz zgłoszenie lub dołącz do projektu
 
-    🌟 Oznacz to repozytorium gwiazdką, jeśli uważasz je za pomocne
+- 🌟 Oznacz to repozytorium gwiazdką, jeśli uważasz je za pomocne
 
 ## 📝 Licencja
 
