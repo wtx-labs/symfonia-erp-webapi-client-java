@@ -18,7 +18,6 @@ Ten klient API zapewnia interfejsy Java dla Symfonia WebAPI, umożliwiając pły
 - 🛡️ **Uwierzytelnianie sesyjne** - bezpieczny dostęp do API Symfonii
 - 📚 **Przejrzysta dokumentacja** - kompleksowe przykłady integracji w Javie
 - 🚀 **Nowoczesne wsparcie Java** - kompatybilność z Java 17 i nowszymi wersjami
-- ⚡ **Wygenerowany z OpenAPI** - bazujący na specyfikacji OpenAPI 3.0
 
 ## 🎯 Zaimplementowane funkcje
 
