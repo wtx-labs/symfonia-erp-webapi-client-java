@@ -1,5 +1,5 @@
 # Klient Symfonia ERP WebAPI dla aplikacji Java
-### Symfonia ERP WebAPI Client for Java
+### Symfonia ERP WebAPI client for Java
 ***
 [![Licencja: MIT](https://img.shields.io/badge/Licencja-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Wersja Java](https://img.shields.io/badge/Java-17%2B-blue)](https://www.java.com)
@@ -14,53 +14,53 @@ Ten klient API zapewnia interfejsy Java dla Symfonia WebAPI, umożliwiając pły
 
 ## ✨ Dlaczego warto wybrać tego klienta?
 
-- 💡 **Typowane interfejsy Java** - w pełni typowane interfejsy dla endpointów Symfonia WebAPI
-- 🛡️ **Uwierzytelnianie sesyjne** - bezpieczny dostęp do API Symfonii
-- 📚 **Przejrzysta dokumentacja** - kompleksowe przykłady integracji w Javie
-- 🚀 **Nowoczesne wsparcie Java** - kompatybilność z Java 17 i nowszymi wersjami
+- 💡 **Typowane interfejsy Java** – w pełni typowane interfejsy dla endpointów Symfonia WebAPI
+- 🛡️ **Uwierzytelnianie sesyjne** – bezpieczny dostęp do API Symfonii
+- 📚 **Przejrzysta dokumentacja** – kompleksowe przykłady integracji w Javie
+- 🚀 **Nowoczesne wsparcie Java** – kompatybilność z Java 17 i nowszymi wersjami
 
 ## 🎯 Zaimplementowane funkcje
 
-- ✅ API Systemowe
+- ✅ API systemowe
   - Endpoint ping do sprawdzenia statusu systemu
   - Informacje o modułach
   - Aktywne instancje HMF
-- ✅ API Sesji
+- ✅ API sesji
   - Otwieranie nowej sesji
   - Pobieranie informacji o sesji
-- ✅ API Kontrahentów
+- ✅ API kontrahentów  
   - Lista/wyszukiwanie kontrahentów
   - Pobieranie szczegółów kontrahenta po ID, kodzie lub NIP
-- ✅ API Towarów
+- ✅ API towarów
   - Lista/wyszukiwanie towarów
   - Pobieranie szczegółów towaru po ID lub kodzie kreskowym
   - Filtrowanie towarów przy użyciu kryteriów SQL
   - Pobieranie wymiarów towaru
-- ✅ API Cen Towarów
+- ✅ API cen towarów
   - Pobieranie cen zamówień
   - Obliczanie cen na podstawie kryteriów
-- ✅ API Stanów Magazynowych
+- ✅ API stanów magazynowych
   - Pobieranie wszystkich stanów magazynowych
   - Pobieranie stanów magazynowych dla towaru
-- ✅ API Zamówień
+- ✅ API zamówień
   - Pobieranie szczegółów zamówienia
   - Pobieranie faktur dla zamówienia
-- ✅ API Wystawiania Zamówień
+- ✅ API wystawiania zamówień
   - Tworzenie nowych zamówień
-- ✅ API Sprzedaży
+- ✅ API sprzedaży
   - Pobieranie dokumentów sprzedaży
   - Filtrowanie sprzedaży według zakresu dat i nabywcy
 
-## 🚨 Status Projektu
+## 🚨 Status projektu
 
 > ⚠️ **Uwaga: To jest wczesna wersja rozwojowa!**
-> 
+>  
 > Aktywnie implementujemy kolejne funkcje Symfonia ERP WebAPI.
 > Zapraszamy do współpracy i zgłaszania uwag na GitHubie!
 
-## 📦 Informacje o Wersji
+## 📦 Informacje o wersji
 
-- **Aktualna Wersja**: `0.1.0`
+- **Aktualna wersja**: `0.1.0`
 - **Wymagana wersja Java**: Java 17+
 
 ## 🔓 Licencja
@@ -71,7 +71,7 @@ Niniejszym udziela się zgody na bezpłatne korzystanie z tego oprogramowania i 
 
 Jedynym wymogiem jest zachowanie oryginalnych informacji o autorze w kodzie źródłowym i dokumentacji.
 
-## 🚀 Szybki Start
+## 🚀 Szybki start
 
 ### 1️⃣ Instalacja
 
@@ -93,7 +93,7 @@ Następnie dodaj zbudowany artefakt do swojego projektu:
 </dependency>
 ```
 
-### 2️⃣ Przykład Integracji w Javie
+### 2️⃣ Przykład integracji w Javie
 
 Oto jak używać klienta Symfonia ERP WebAPI:
 
@@ -147,36 +147,36 @@ public class SymfoniaWebApiClientUsageDemo {
 
 Klient udostępnia następujące główne interfejsy API:
 
-### API Systemowe
+### API systemowe
 - `pingSymfoniaApi()` - Sprawdzenie statusu systemu i pobranie informacji o modułach
 
-### API Sesji
+### API sesji
 - `openNewSession(deviceName)` - Otwarcie nowej sesji
 - `getSessionInformation()` - Pobranie szczegółów bieżącej sesji
 
-### API Kontrahentów
+### API kontrahentów
 - `getContractors(id, code, nip)` - Pobranie informacji o kontrahencie
 
-### API Towarów
+### API towarów
 - `getProducts(id, barcode)` - Pobranie informacji o towarze
 - `getProductsByFilterSql(productCriteriaFilter)` - Filtrowanie towarów przy użyciu kryteriów SQL
 - `getProductDimensions(productId)` - Pobranie wymiarów towaru
 
-### API Cen Towarów
+### API cen towarów
 - `getOrderPrices(priceOrderCriteria)` - Obliczanie cen zamówień
 
-### API Stanów Magazynowych
+### API stanów magazynowych
 - `getInventoryStates()` - Pobranie wszystkich stanów magazynowych
 - `getInventoryStatesByProduct(id, code)` - Pobranie stanów magazynowych dla towaru
 
-### API Zamówień
+### API zamówień
 - `getOrder(number)` - Pobranie szczegółów zamówienia
 - `getInvoicesForOrder(orderNumber)` - Pobranie faktur dla zamówienia
 
-### API Wystawiania Zamówień
+### API wystawiania zamówień
 - `addNewOrdersIssue(orderIssue, issue)` - Utworzenie nowego zamówienia
 
-### API Sprzedaży
+### API sprzedaży
 - `getSaleDocument(id, number)` - Pobranie dokumentu sprzedaży
 - `getSalesByBuyerAndDateRange(buyerId, dateFrom, dateTo)` - Filtrowanie dokumentów sprzedaży
 
