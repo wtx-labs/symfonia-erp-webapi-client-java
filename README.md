@@ -119,7 +119,7 @@ public class SymfoniaWebApiClientUsageDemo {
         apiClient.setBasePath(API_BASE_PATH);
 
         // TODO: If you need to invoke an API that requires authorization, provide a valid session token as shown below:
-        // apiClient.addDefaultHeader("Authorization", "Session 2ab29954-ca2d-4c6b-873b-9b136e892d7d")
+        // apiClient.addDefaultHeader("Authorization", "Session 2ab29954-ca2d-4c6b-873b-9b136e892d7d");
 
         // The System API does not require authorization, so there is no need to provide a session token in the Authorization header.
         SystemApi systemApi = new SystemApi(apiClient);
