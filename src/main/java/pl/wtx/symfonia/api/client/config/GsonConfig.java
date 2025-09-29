@@ -13,7 +13,6 @@ public class GsonConfig {
     
         return new GsonBuilder()
                 .setStrictness(Strictness.LENIENT)
-                .serializeNulls()
                 .registerTypeAdapter(OffsetDateTime.class, new OffsetDateTimeAdapter())
                 .registerTypeAdapter(LocalDate.class, new LocalDateAdapter())
                 .create();

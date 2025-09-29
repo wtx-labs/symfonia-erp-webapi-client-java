@@ -12,7 +12,7 @@ import com.google.gson.stream.JsonWriter;
 
 public class OffsetDateTimeAdapter extends TypeAdapter<OffsetDateTime> {
 
-    private static final DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss");
+    private static final DateTimeFormatter FORMATTER = DateTimeFormatter.ISO_OFFSET_DATE_TIME;
 
     @Override
     public void write(JsonWriter out, OffsetDateTime value) throws IOException {

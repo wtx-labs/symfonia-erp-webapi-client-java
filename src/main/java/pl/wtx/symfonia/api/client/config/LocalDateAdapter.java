@@ -14,16 +14,16 @@ import com.google.gson.JsonSerializer;
 
 public class LocalDateAdapter implements JsonSerializer<LocalDate>, JsonDeserializer<LocalDate> {
 
-    private static final DateTimeFormatter formatter = DateTimeFormatter.ISO_LOCAL_DATE;
+    private static final DateTimeFormatter FORMATTER = DateTimeFormatter.ISO_LOCAL_DATE;
 
     @Override
     public JsonElement serialize(LocalDate localDate, Type typeOfSrc, JsonSerializationContext context) {
-        return (localDate == null) ? null : new JsonPrimitive(localDate.format(formatter));
+        return (localDate == null) ? null : new JsonPrimitive(localDate.format(FORMATTER));
     }
 
     @Override
     public LocalDate deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) throws JsonParseException {
-        return (json == null || json.getAsString().isEmpty()) ? null : LocalDate.parse(json.getAsString(), formatter);
+        return (json == null || json.getAsString().isEmpty()) ? null : LocalDate.parse(json.getAsString(), FORMATTER);
     }
 
 }

@@ -20,6 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -72,7 +73,7 @@ public class PriceOrderCriteria {
   public static final String SERIALIZED_NAME_DATE = "Date";
   @SerializedName(SERIALIZED_NAME_DATE)
   @javax.annotation.Nullable
-  private String date;
+  private LocalDate date;
 
   public static final String SERIALIZED_NAME_CURRENCY = "Currency";
   @SerializedName(SERIALIZED_NAME_CURRENCY)
@@ -154,7 +155,7 @@ public class PriceOrderCriteria {
   }
 
 
-  public PriceOrderCriteria date(@javax.annotation.Nullable String date) {
+  public PriceOrderCriteria date(@javax.annotation.Nullable LocalDate date) {
     this.date = date;
     return this;
   }
@@ -164,11 +165,11 @@ public class PriceOrderCriteria {
    * @return date
    */
   @javax.annotation.Nullable
-  public String getDate() {
+  public LocalDate getDate() {
     return date;
   }
 
-  public void setDate(@javax.annotation.Nullable String date) {
+  public void setDate(@javax.annotation.Nullable LocalDate date) {
     this.date = date;
   }
 
@@ -358,9 +359,6 @@ public class PriceOrderCriteria {
       }
       if ((jsonObj.get("Department") != null && !jsonObj.get("Department").isJsonNull()) && !jsonObj.get("Department").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `Department` to be a primitive type in the JSON string but got `%s`", jsonObj.get("Department").toString()));
-      }
-      if ((jsonObj.get("Date") != null && !jsonObj.get("Date").isJsonNull()) && !jsonObj.get("Date").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `Date` to be a primitive type in the JSON string but got `%s`", jsonObj.get("Date").toString()));
       }
       if ((jsonObj.get("Currency") != null && !jsonObj.get("Currency").isJsonNull()) && !jsonObj.get("Currency").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `Currency` to be a primitive type in the JSON string but got `%s`", jsonObj.get("Currency").toString()));
