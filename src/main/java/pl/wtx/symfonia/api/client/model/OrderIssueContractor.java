@@ -48,7 +48,7 @@ import pl.wtx.symfonia.api.client.invoker.JSON;
 /**
  * Klasa reprezentujaca informacje o kontrahencie wykorzystywane do wystawienia dokumentu zamowienia obcego.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.13.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.15.0")
 public class OrderIssueContractor {
   public static final String SERIALIZED_NAME_ID = "Id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -147,12 +147,10 @@ public class OrderIssueContractor {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("Id");
-    openapiFields.add("Code");
+    openapiFields = new HashSet<String>(Arrays.asList("Id", "Code"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
   /**

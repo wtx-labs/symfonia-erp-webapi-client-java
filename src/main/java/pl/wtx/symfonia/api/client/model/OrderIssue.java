@@ -53,7 +53,7 @@ import pl.wtx.symfonia.api.client.invoker.JSON;
 /**
  * OrderIssue
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.13.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.15.0")
 public class OrderIssue {
   public static final String SERIALIZED_NAME_TYPE_CODE = "TypeCode";
   @SerializedName(SERIALIZED_NAME_TYPE_CODE)
@@ -394,21 +394,10 @@ public class OrderIssue {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("TypeCode");
-    openapiFields.add("Series");
-    openapiFields.add("Department");
-    openapiFields.add("PaymentRegistry");
-    openapiFields.add("PaymentFormId");
-    openapiFields.add("Buyer");
-    openapiFields.add("Recipient");
-    openapiFields.add("PriceKind");
-    openapiFields.add("SalePriceType");
-    openapiFields.add("Description");
-    openapiFields.add("Positions");
+    openapiFields = new HashSet<String>(Arrays.asList("TypeCode", "Series", "Department", "PaymentRegistry", "PaymentFormId", "Buyer", "Recipient", "PriceKind", "SalePriceType", "Description", "Positions"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
   /**

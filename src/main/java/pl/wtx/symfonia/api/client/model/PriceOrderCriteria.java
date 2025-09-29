@@ -53,7 +53,7 @@ import pl.wtx.symfonia.api.client.invoker.JSON;
 /**
  * PriceOrderCriteria
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.13.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.15.0")
 public class PriceOrderCriteria {
   public static final String SERIALIZED_NAME_TYPE_CODE = "TypeCode";
   @SerializedName(SERIALIZED_NAME_TYPE_CODE)
@@ -316,18 +316,10 @@ public class PriceOrderCriteria {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("TypeCode");
-    openapiFields.add("Series");
-    openapiFields.add("Department");
-    openapiFields.add("Date");
-    openapiFields.add("Currency");
-    openapiFields.add("SalePriceType");
-    openapiFields.add("Contractor");
-    openapiFields.add("Products");
+    openapiFields = new HashSet<String>(Arrays.asList("TypeCode", "Series", "Department", "Date", "Currency", "SalePriceType", "Contractor", "Products"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
   /**

@@ -48,7 +48,7 @@ import pl.wtx.symfonia.api.client.invoker.JSON;
 /**
  * ActiveHMFInfo
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.13.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.15.0")
 public class ActiveHMFInfo {
   public static final String SERIALIZED_NAME_SEED = "Seed";
   @SerializedName(SERIALIZED_NAME_SEED)
@@ -225,15 +225,10 @@ public class ActiveHMFInfo {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("Seed");
-    openapiFields.add("ServerName");
-    openapiFields.add("DatabaseName");
-    openapiFields.add("Firm");
-    openapiFields.add("User");
+    openapiFields = new HashSet<String>(Arrays.asList("Seed", "ServerName", "DatabaseName", "Firm", "User"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
   /**

@@ -49,7 +49,7 @@ import pl.wtx.symfonia.api.client.invoker.JSON;
 /**
  * SessionInformation
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.13.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.15.0")
 public class SessionInformation {
   public static final String SERIALIZED_NAME_TOKEN = "token";
   @SerializedName(SERIALIZED_NAME_TOKEN)
@@ -226,15 +226,10 @@ public class SessionInformation {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("token");
-    openapiFields.add("DeviceName");
-    openapiFields.add("ExpireTime");
-    openapiFields.add("RegisterTime");
-    openapiFields.add("TotalSessionsCount");
+    openapiFields = new HashSet<String>(Arrays.asList("token", "DeviceName", "ExpireTime", "RegisterTime", "TotalSessionsCount"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
   /**

@@ -52,7 +52,7 @@ import pl.wtx.symfonia.api.client.invoker.JSON;
 /**
  * PingResponse
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.13.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.15.0")
 public class PingResponse {
   public static final String SERIALIZED_NAME_OPEN_SESSIONS_NUMBER = "OpenSessionsNumber";
   @SerializedName(SERIALIZED_NAME_OPEN_SESSIONS_NUMBER)
@@ -193,13 +193,10 @@ public class PingResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("OpenSessionsNumber");
-    openapiFields.add("ActiveHMFInfo");
-    openapiFields.add("LoadedModuleInfo");
+    openapiFields = new HashSet<String>(Arrays.asList("OpenSessionsNumber", "ActiveHMFInfo", "LoadedModuleInfo"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
   /**

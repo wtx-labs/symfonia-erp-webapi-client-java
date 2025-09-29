@@ -48,7 +48,7 @@ import pl.wtx.symfonia.api.client.invoker.JSON;
 /**
  * Dimension
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.13.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.15.0")
 public class Dimension {
   public static final String SERIALIZED_NAME_CODE = "Code";
   @SerializedName(SERIALIZED_NAME_CODE)
@@ -225,15 +225,10 @@ public class Dimension {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("Code");
-    openapiFields.add("DictionaryValue");
-    openapiFields.add("Name");
-    openapiFields.add("Type");
-    openapiFields.add("Value");
+    openapiFields = new HashSet<String>(Arrays.asList("Code", "DictionaryValue", "Name", "Type", "Value"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
   /**

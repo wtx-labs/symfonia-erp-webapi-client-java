@@ -29,7 +29,6 @@ import java.io.IOException;
 
 import pl.wtx.symfonia.api.client.model.ApiError;
 import pl.wtx.symfonia.api.client.model.InventoryState;
-import java.time.OffsetDateTime;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -338,7 +337,7 @@ public class InventoryStatesApi {
     }
     /**
      * Build call for getInventoryStatesChanges
-     * @param date Data od kiedy mają zostać pobrane zmiany. Data paramteru powinna zostac podana w formacie yyyy-MM-dd. (optional)
+     * @param date Data od kiedy mają zostać pobrane zmiany. Data parametru powinna zostac podana w formacie ISO 8601 (np. 2025-09-29T16:00:00) (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -351,7 +350,7 @@ public class InventoryStatesApi {
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getInventoryStatesChangesCall(@javax.annotation.Nullable OffsetDateTime date, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getInventoryStatesChangesCall(@javax.annotation.Nullable String date, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -400,7 +399,7 @@ public class InventoryStatesApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getInventoryStatesChangesValidateBeforeCall(@javax.annotation.Nullable OffsetDateTime date, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getInventoryStatesChangesValidateBeforeCall(@javax.annotation.Nullable String date, final ApiCallback _callback) throws ApiException {
         return getInventoryStatesChangesCall(date, _callback);
 
     }
@@ -408,7 +407,7 @@ public class InventoryStatesApi {
     /**
      * Metoda umozliwia pobranie stanow magazynowych i handlowych ktore zeminily sie od konkretenej daty.
      * 
-     * @param date Data od kiedy mają zostać pobrane zmiany. Data paramteru powinna zostac podana w formacie yyyy-MM-dd. (optional)
+     * @param date Data od kiedy mają zostać pobrane zmiany. Data parametru powinna zostac podana w formacie ISO 8601 (np. 2025-09-29T16:00:00) (optional)
      * @return List&lt;InventoryState&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -420,7 +419,7 @@ public class InventoryStatesApi {
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
      </table>
      */
-    public List<InventoryState> getInventoryStatesChanges(@javax.annotation.Nullable OffsetDateTime date) throws ApiException {
+    public List<InventoryState> getInventoryStatesChanges(@javax.annotation.Nullable String date) throws ApiException {
         ApiResponse<List<InventoryState>> localVarResp = getInventoryStatesChangesWithHttpInfo(date);
         return localVarResp.getData();
     }
@@ -428,7 +427,7 @@ public class InventoryStatesApi {
     /**
      * Metoda umozliwia pobranie stanow magazynowych i handlowych ktore zeminily sie od konkretenej daty.
      * 
-     * @param date Data od kiedy mają zostać pobrane zmiany. Data paramteru powinna zostac podana w formacie yyyy-MM-dd. (optional)
+     * @param date Data od kiedy mają zostać pobrane zmiany. Data parametru powinna zostac podana w formacie ISO 8601 (np. 2025-09-29T16:00:00) (optional)
      * @return ApiResponse&lt;List&lt;InventoryState&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -440,7 +439,7 @@ public class InventoryStatesApi {
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<InventoryState>> getInventoryStatesChangesWithHttpInfo(@javax.annotation.Nullable OffsetDateTime date) throws ApiException {
+    public ApiResponse<List<InventoryState>> getInventoryStatesChangesWithHttpInfo(@javax.annotation.Nullable String date) throws ApiException {
         okhttp3.Call localVarCall = getInventoryStatesChangesValidateBeforeCall(date, null);
         Type localVarReturnType = new TypeToken<List<InventoryState>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -449,7 +448,7 @@ public class InventoryStatesApi {
     /**
      * Metoda umozliwia pobranie stanow magazynowych i handlowych ktore zeminily sie od konkretenej daty. (asynchronously)
      * 
-     * @param date Data od kiedy mają zostać pobrane zmiany. Data paramteru powinna zostac podana w formacie yyyy-MM-dd. (optional)
+     * @param date Data od kiedy mają zostać pobrane zmiany. Data parametru powinna zostac podana w formacie ISO 8601 (np. 2025-09-29T16:00:00) (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -462,7 +461,7 @@ public class InventoryStatesApi {
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getInventoryStatesChangesAsync(@javax.annotation.Nullable OffsetDateTime date, final ApiCallback<List<InventoryState>> _callback) throws ApiException {
+    public okhttp3.Call getInventoryStatesChangesAsync(@javax.annotation.Nullable String date, final ApiCallback<List<InventoryState>> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getInventoryStatesChangesValidateBeforeCall(date, _callback);
         Type localVarReturnType = new TypeToken<List<InventoryState>>(){}.getType();

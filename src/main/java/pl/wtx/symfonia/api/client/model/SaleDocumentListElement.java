@@ -49,7 +49,7 @@ import pl.wtx.symfonia.api.client.invoker.JSON;
 /**
  * SaleDocumentListElement
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.13.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.15.0")
 public class SaleDocumentListElement {
   public static final String SERIALIZED_NAME_DOCUMENT_NUMBER = "DocumentNumber";
   @SerializedName(SERIALIZED_NAME_DOCUMENT_NUMBER)
@@ -278,17 +278,10 @@ public class SaleDocumentListElement {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("DocumentNumber");
-    openapiFields.add("NetValuePLN");
-    openapiFields.add("VatValuePLN");
-    openapiFields.add("NetValue");
-    openapiFields.add("GrossValue");
-    openapiFields.add("IssueDate");
-    openapiFields.add("SaleDate");
+    openapiFields = new HashSet<String>(Arrays.asList("DocumentNumber", "NetValuePLN", "VatValuePLN", "NetValue", "GrossValue", "IssueDate", "SaleDate"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
   /**

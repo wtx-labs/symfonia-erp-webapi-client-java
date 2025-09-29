@@ -48,7 +48,7 @@ import pl.wtx.symfonia.api.client.invoker.JSON;
 /**
  * Klasa reprezentujaca informacje o pozycji dokumentu wykorzystywane do wystawienia zamowienia obcego.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.13.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.15.0")
 public class OrderIssuePosition {
   public static final String SERIALIZED_NAME_CODE = "Code";
   @SerializedName(SERIALIZED_NAME_CODE)
@@ -173,13 +173,10 @@ public class OrderIssuePosition {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("Code");
-    openapiFields.add("Quantity");
-    openapiFields.add("Value");
+    openapiFields = new HashSet<String>(Arrays.asList("Code", "Quantity", "Value"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
   /**

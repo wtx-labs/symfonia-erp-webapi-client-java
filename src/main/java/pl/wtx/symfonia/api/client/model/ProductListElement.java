@@ -48,7 +48,7 @@ import pl.wtx.symfonia.api.client.invoker.JSON;
 /**
  * ProductListElement
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.13.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.15.0")
 public class ProductListElement {
   public static final String SERIALIZED_NAME_ID = "Id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -277,17 +277,10 @@ public class ProductListElement {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("Id");
-    openapiFields.add("Code");
-    openapiFields.add("Name");
-    openapiFields.add("Type");
-    openapiFields.add("Active");
-    openapiFields.add("Barcode");
-    openapiFields.add("Unit");
+    openapiFields = new HashSet<String>(Arrays.asList("Id", "Code", "Name", "Type", "Active", "Barcode", "Unit"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
   /**

@@ -48,7 +48,7 @@ import pl.wtx.symfonia.api.client.invoker.JSON;
 /**
  * ProductCriteriaFilter
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.13.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.15.0")
 public class ProductCriteriaFilter {
   public static final String SERIALIZED_NAME_CATALOG_ID = "CatalogId";
   @SerializedName(SERIALIZED_NAME_CATALOG_ID)
@@ -199,14 +199,10 @@ public class ProductCriteriaFilter {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("CatalogId");
-    openapiFields.add("Active");
-    openapiFields.add("Barcode");
-    openapiFields.add("KindId");
+    openapiFields = new HashSet<String>(Arrays.asList("CatalogId", "Active", "Barcode", "KindId"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
   /**

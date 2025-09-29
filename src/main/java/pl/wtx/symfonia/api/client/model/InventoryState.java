@@ -48,7 +48,7 @@ import pl.wtx.symfonia.api.client.invoker.JSON;
 /**
  * InventoryState
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.13.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.15.0")
 public class InventoryState {
   public static final String SERIALIZED_NAME_PRODUCT_ID = "ProductId";
   @SerializedName(SERIALIZED_NAME_PRODUCT_ID)
@@ -199,14 +199,10 @@ public class InventoryState {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("ProductId");
-    openapiFields.add("WarehouseId");
-    openapiFields.add("AmountInStore");
-    openapiFields.add("AmountToSale");
+    openapiFields = new HashSet<String>(Arrays.asList("ProductId", "WarehouseId", "AmountInStore", "AmountToSale"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
   /**

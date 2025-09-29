@@ -48,7 +48,7 @@ import pl.wtx.symfonia.api.client.invoker.JSON;
 /**
  * LoadedModuleInfo
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.13.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.15.0")
 public class LoadedModuleInfo {
   public static final String SERIALIZED_NAME_ASSEMBLY_NAME = "AssemblyName";
   @SerializedName(SERIALIZED_NAME_ASSEMBLY_NAME)
@@ -173,13 +173,10 @@ public class LoadedModuleInfo {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("AssemblyName");
-    openapiFields.add("ModuleName");
-    openapiFields.add("ModuleVersion");
+    openapiFields = new HashSet<String>(Arrays.asList("AssemblyName", "ModuleName", "ModuleVersion"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
   /**
