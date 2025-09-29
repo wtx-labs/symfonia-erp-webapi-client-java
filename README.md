@@ -3,6 +3,7 @@
 ***
 [![Licencja: MIT](https://img.shields.io/badge/Licencja-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Wersja Java](https://img.shields.io/badge/Java-17%2B-blue)](https://www.java.com)
+[![Maven Central](https://img.shields.io/maven-central/v/pl.wtx.symfonia/symfonia-erp-webapi-client?label=Maven%20Central&logo=apache-maven&color=blue)](https://mvnrepository.com/artifact/pl.wtx.allegro/allegro-rest-api-client)
 
 Lekka biblioteka kliencka w języku Java do integracji z Symfonia WebAPI. Stworzona dla programistów Java, którzy potrzebują zintegrować swoje aplikacje z API systemu Symfonia ERP. 🚀
 
@@ -61,7 +62,7 @@ Ten klient API zapewnia interfejsy Java dla Symfonia WebAPI, umożliwiając pły
 
 ## 📦 Informacje o wersji
 
-- **Aktualna wersja**: `0.1.1`
+- **Aktualna wersja**: `0.1.2`
 - **Wymagana wersja Java**: Java 17+
 
 ## 🔓 Licencja
@@ -76,7 +77,17 @@ Jedynym wymogiem jest zachowanie oryginalnych informacji o autorze w kodzie źr�
 
 ### 1️⃣ Instalacja
 
-Sklonuj i zbuduj bibliotekę ze źródeł:
+Możesz dodać bibliotekę do swojego projektu, dołączając zależność z Maven Central:
+
+```xml
+<dependency>
+    <groupId>pl.wtx.symfonia</groupId>
+    <artifactId>symfonia-erp-webapi-client</artifactId>
+    <version>0.1.2</version>
+</dependency>
+```
+
+Alternatywnie, możesz sklonować i zbudować bibliotekę ze źródeł:
 
 ```sh
 git clone https://github.com/wtx-labs/symfonia-erp-webapi-client-java.git
@@ -90,7 +101,7 @@ Następnie dodaj zbudowany artefakt do swojego projektu:
 <dependency>
     <groupId>pl.wtx.symfonia</groupId>
     <artifactId>symfonia-erp-webapi-client</artifactId>
-    <version>0.1.1</version>
+    <version>0.1.2</version>
 </dependency>
 ```
 
