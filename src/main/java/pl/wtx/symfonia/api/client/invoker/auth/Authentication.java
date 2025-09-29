@@ -13,12 +13,11 @@
 
 package pl.wtx.symfonia.api.client.invoker.auth;
 
+import pl.wtx.symfonia.api.client.invoker.Pair;
+import pl.wtx.symfonia.api.client.invoker.ApiException;
+
 import java.net.URI;
 import java.util.Map;
-
-import pl.wtx.symfonia.api.client.invoker.ApiException;
-import pl.wtx.symfonia.api.client.invoker.Pair;
-
 import java.util.List;
 
 public interface Authentication {

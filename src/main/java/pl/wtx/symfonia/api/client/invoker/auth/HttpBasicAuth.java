@@ -13,9 +13,10 @@
 
 package pl.wtx.symfonia.api.client.invoker.auth;
 
-import okhttp3.Credentials;
-import pl.wtx.symfonia.api.client.invoker.ApiException;
 import pl.wtx.symfonia.api.client.invoker.Pair;
+import pl.wtx.symfonia.api.client.invoker.ApiException;
+
+import okhttp3.Credentials;
 
 import java.net.URI;
 import java.util.Map;

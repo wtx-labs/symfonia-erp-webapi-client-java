@@ -19,16 +19,13 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-
-import pl.wtx.symfonia.api.client.invoker.JSON;
-import pl.wtx.symfonia.api.client.model.OrderIssueContractor;
-import pl.wtx.symfonia.api.client.model.OrderIssuePosition;
-import pl.wtx.symfonia.api.client.model.PaymentRegistry;
-
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import pl.wtx.symfonia.api.client.model.OrderIssueContractor;
+import pl.wtx.symfonia.api.client.model.OrderIssuePosition;
+import pl.wtx.symfonia.api.client.model.PaymentRegistry;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -50,6 +47,8 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+
+import pl.wtx.symfonia.api.client.invoker.JSON;
 
 /**
  * OrderIssue

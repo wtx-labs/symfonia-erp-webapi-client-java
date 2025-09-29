@@ -13,14 +13,14 @@
 
 package pl.wtx.symfonia.api.client.invoker.auth;
 
+import pl.wtx.symfonia.api.client.invoker.ApiException;
+import pl.wtx.symfonia.api.client.invoker.Pair;
+
 import java.net.URI;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.function.Supplier;
-
-import pl.wtx.symfonia.api.client.invoker.ApiException;
-import pl.wtx.symfonia.api.client.invoker.Pair;
 
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.10.0")
 public class HttpBearerAuth implements Authentication {

@@ -1,4 +1,5 @@
 package pl.wtx.symfonia.api.client.config;
+import java.time.LocalDate;
 import java.time.OffsetDateTime;
 
 import com.google.gson.Gson;
@@ -14,6 +15,7 @@ public class GsonConfig {
                 .setStrictness(Strictness.LENIENT)
                 .serializeNulls()
                 .registerTypeAdapter(OffsetDateTime.class, new OffsetDateTimeAdapter())
+                .registerTypeAdapter(LocalDate.class, new LocalDateAdapter())
                 .create();
     
     }

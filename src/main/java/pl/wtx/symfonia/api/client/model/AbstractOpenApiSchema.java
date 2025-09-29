@@ -13,10 +13,8 @@
 
 package pl.wtx.symfonia.api.client.model;
 
-import java.util.Objects;
-
 import pl.wtx.symfonia.api.client.invoker.ApiException;
-
+import java.util.Objects;
 import java.lang.reflect.Type;
 import java.util.Map;
 

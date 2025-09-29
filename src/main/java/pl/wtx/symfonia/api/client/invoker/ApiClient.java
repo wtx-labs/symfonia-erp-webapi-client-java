@@ -21,10 +21,6 @@ import okhttp3.logging.HttpLoggingInterceptor.Level;
 import okio.Buffer;
 import okio.BufferedSink;
 import okio.Okio;
-import pl.wtx.symfonia.api.client.invoker.auth.ApiKeyAuth;
-import pl.wtx.symfonia.api.client.invoker.auth.Authentication;
-import pl.wtx.symfonia.api.client.invoker.auth.HttpBasicAuth;
-import pl.wtx.symfonia.api.client.invoker.auth.HttpBearerAuth;
 
 import javax.net.ssl.*;
 import java.io.File;
@@ -54,6 +50,11 @@ import java.util.concurrent.TimeUnit;
 import java.util.function.Supplier;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import pl.wtx.symfonia.api.client.invoker.auth.Authentication;
+import pl.wtx.symfonia.api.client.invoker.auth.HttpBasicAuth;
+import pl.wtx.symfonia.api.client.invoker.auth.HttpBearerAuth;
+import pl.wtx.symfonia.api.client.invoker.auth.ApiKeyAuth;
 
 /**
  * <p>ApiClient class.</p>

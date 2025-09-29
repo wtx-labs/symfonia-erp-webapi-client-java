@@ -60,7 +60,7 @@ Ten klient API zapewnia interfejsy Java dla Symfonia WebAPI, umożliwiając pły
 
 ## 📦 Informacje o wersji
 
-- **Aktualna wersja**: `0.1.0`
+- **Aktualna wersja**: `0.1.1`
 - **Wymagana wersja Java**: Java 17+
 
 ## 🔓 Licencja
@@ -89,7 +89,7 @@ Następnie dodaj zbudowany artefakt do swojego projektu:
 <dependency>
     <groupId>pl.wtx.symfonia</groupId>
     <artifactId>symfonia-erp-webapi-client</artifactId>
-    <version>0.1.0</version>
+    <version>0.1.1</version>
 </dependency>
 ```
 
@@ -168,6 +168,7 @@ Klient udostępnia następujące główne interfejsy API:
 ### API stanów magazynowych
 - `getInventoryStates()` - Pobranie wszystkich stanów magazynowych
 - `getInventoryStatesByProduct(id, code)` - Pobranie stanów magazynowych dla towaru
+- `getInventoryStatesChanges(date)` - Pobranie zmian stanów magazynowych
 
 ### API zamówień
 - `getOrder(number)` - Pobranie szczegółów zamówienia

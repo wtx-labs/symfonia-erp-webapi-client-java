@@ -13,8 +13,6 @@
 
 package pl.wtx.symfonia.api.client;
 
-import com.google.gson.reflect.TypeToken;
-
 import pl.wtx.symfonia.api.client.invoker.ApiCallback;
 import pl.wtx.symfonia.api.client.invoker.ApiClient;
 import pl.wtx.symfonia.api.client.invoker.ApiException;
@@ -23,10 +21,16 @@ import pl.wtx.symfonia.api.client.invoker.Configuration;
 import pl.wtx.symfonia.api.client.invoker.Pair;
 import pl.wtx.symfonia.api.client.invoker.ProgressRequestBody;
 import pl.wtx.symfonia.api.client.invoker.ProgressResponseBody;
-import pl.wtx.symfonia.api.client.model.ApiError;
-import pl.wtx.symfonia.api.client.model.InventoryState;
+
+import com.google.gson.reflect.TypeToken;
 
 import java.io.IOException;
+
+
+import pl.wtx.symfonia.api.client.model.ApiError;
+import pl.wtx.symfonia.api.client.model.InventoryState;
+import java.time.LocalDate;
+
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -328,6 +332,139 @@ public class InventoryStatesApi {
     public okhttp3.Call getInventoryStatesByProductAsync(String id, String code, final ApiCallback<List<InventoryState>> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getInventoryStatesByProductValidateBeforeCall(id, code, _callback);
+        Type localVarReturnType = new TypeToken<List<InventoryState>>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for getInventoryStatesChanges
+     * @param date Data od kiedy mają zostać pobrane zmiany. Data paramteru powinna zostac podana w formacie yyyy-MM-dd. (optional)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Zwraca kolekcje obiektow stanow magazynowych i handlowych InventoryState. </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call getInventoryStatesChangesCall(LocalDate date, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/InventoryStates/Changes";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        if (date != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("date", date));
+        }
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call getInventoryStatesChangesValidateBeforeCall(LocalDate date, final ApiCallback _callback) throws ApiException {
+        return getInventoryStatesChangesCall(date, _callback);
+
+    }
+
+    /**
+     * Metoda umozliwia pobranie stanow magazynowych i handlowych ktore zeminily sie od konkretenej daty.
+     * 
+     * @param date Data od kiedy mają zostać pobrane zmiany. Data paramteru powinna zostac podana w formacie yyyy-MM-dd. (optional)
+     * @return List&lt;InventoryState&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Zwraca kolekcje obiektow stanow magazynowych i handlowych InventoryState. </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+     </table>
+     */
+    public List<InventoryState> getInventoryStatesChanges(LocalDate date) throws ApiException {
+        ApiResponse<List<InventoryState>> localVarResp = getInventoryStatesChangesWithHttpInfo(date);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Metoda umozliwia pobranie stanow magazynowych i handlowych ktore zeminily sie od konkretenej daty.
+     * 
+     * @param date Data od kiedy mają zostać pobrane zmiany. Data paramteru powinna zostac podana w formacie yyyy-MM-dd. (optional)
+     * @return ApiResponse&lt;List&lt;InventoryState&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Zwraca kolekcje obiektow stanow magazynowych i handlowych InventoryState. </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<List<InventoryState>> getInventoryStatesChangesWithHttpInfo(LocalDate date) throws ApiException {
+        okhttp3.Call localVarCall = getInventoryStatesChangesValidateBeforeCall(date, null);
+        Type localVarReturnType = new TypeToken<List<InventoryState>>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Metoda umozliwia pobranie stanow magazynowych i handlowych ktore zeminily sie od konkretenej daty. (asynchronously)
+     * 
+     * @param date Data od kiedy mają zostać pobrane zmiany. Data paramteru powinna zostac podana w formacie yyyy-MM-dd. (optional)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Zwraca kolekcje obiektow stanow magazynowych i handlowych InventoryState. </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call getInventoryStatesChangesAsync(LocalDate date, final ApiCallback<List<InventoryState>> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = getInventoryStatesChangesValidateBeforeCall(date, _callback);
         Type localVarReturnType = new TypeToken<List<InventoryState>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

@@ -13,8 +13,6 @@
 
 package pl.wtx.symfonia.api.client;
 
-import com.google.gson.reflect.TypeToken;
-
 import pl.wtx.symfonia.api.client.invoker.ApiCallback;
 import pl.wtx.symfonia.api.client.invoker.ApiClient;
 import pl.wtx.symfonia.api.client.invoker.ApiException;
@@ -23,11 +21,16 @@ import pl.wtx.symfonia.api.client.invoker.Configuration;
 import pl.wtx.symfonia.api.client.invoker.Pair;
 import pl.wtx.symfonia.api.client.invoker.ProgressRequestBody;
 import pl.wtx.symfonia.api.client.invoker.ProgressResponseBody;
+
+import com.google.gson.reflect.TypeToken;
+
+import java.io.IOException;
+
+
 import pl.wtx.symfonia.api.client.model.ApiError;
 import pl.wtx.symfonia.api.client.model.Order;
 import pl.wtx.symfonia.api.client.model.OrderIssue;
 
-import java.io.IOException;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.HashMap;
