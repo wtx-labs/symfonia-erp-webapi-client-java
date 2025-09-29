@@ -19,6 +19,17 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
+	<distributionManagement>
+        <snapshotRepository>
+            <id>ossrh</id>
+            <url>https://central.sonatype.com/api/v1/publisher/upload</url>
+        </snapshotRepository>
+        <repository>
+            <id>ossrh</id>
+            <url>https://central.sonatype.com/api/v1/publisher/upload</url>
+        </repository>
+    </distributionManagement>
+
 	<dependencies>
 
 		<dependency>
@@ -42,13 +53,13 @@
 		<dependency>
 			<groupId>com.google.code.gson</groupId>
 			<artifactId>gson</artifactId>
-			<version>2.11.0</version>
+			<version>2.13.1</version>
 		</dependency>
 
 		<dependency>
 			<groupId>com.squareup.okio</groupId>
 			<artifactId>okio</artifactId>
-			<version>3.9.1</version>
+			<version>3.13.0</version>
 		</dependency>
 
 		<dependency>
@@ -79,32 +90,202 @@
 			</plugin>
 
 			<plugin>
-	            <groupId>org.apache.maven.plugins</groupId>
-	            <artifactId>maven-assembly-plugin</artifactId>
-	            <version>3.3.0</version>
-	            <configuration>
-	                <descriptorRefs>
-	                    <descriptorRef>jar-with-dependencies</descriptorRef>
-	                </descriptorRefs>
-	                <archive>
-	                    <manifest>
-	                        <mainClass>pl.wtx.symfonia.SymfoniaErpWebApiClientUsageDemo</mainClass>
-	                    </manifest>
-	                </archive>
-	                <appendAssemblyId>false</appendAssemblyId>
-	            </configuration>
-	            <executions>
-	                <execution>
-	                    <id>assemble-jar-with-dependencies</id>
-	                    <phase>package</phase>
-	                    <goals>
-	                        <goal>single</goal>
-	                    </goals>
-	                </execution>
-	            </executions>
-	        </plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>3.3.0</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar-no-fork</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>3.6.3</version>
+                <configuration>
+                    <doclint>none</doclint>
+                    <failOnError>false</failOnError>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>3.3.0</version>
+                <configuration>
+                    <descriptorRefs>
+                        <descriptorRef>jar-with-dependencies</descriptorRef>
+                    </descriptorRefs>
+                    <archive>
+                        <manifest>
+                            <mainClass>pl.wtx.symfonia.SymfoniaErpWebApiClientUsageDemo</mainClass>
+                        </manifest>
+                    </archive>
+                    <appendAssemblyId>false</appendAssemblyId>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>assemble-jar-with-dependencies</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>3.0.1</version>
+                <executions>
+                    <execution>
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                        <configuration>
+                            <keyname>${gpg.keyname}</keyname>
+                            <passphrase>${gpg.passphrase}</passphrase>
+                            <gpgArguments>
+                                <arg>--batch</arg>
+                                <arg>--yes</arg>
+                                <arg>--pinentry-mode</arg>
+                                <arg>loopback</arg>
+                            </gpgArguments>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>org.sonatype.central</groupId>
+                <artifactId>central-publishing-maven-plugin</artifactId>
+                <version>0.7.0</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <serverId>central</serverId>
+                    <centralBaseUrl>https://central.sonatype.com</centralBaseUrl>
+                    <deploymentName>Symfonia ERP WebAPI Client - ${project.version}</deploymentName>
+                    <checksums>required</checksums>
+                    <skipPublishing>false</skipPublishing>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <version>3.1.1</version>
+                <configuration>
+                    <altDeploymentRepository>ossrh::default::https://central.sonatype.com/api/v1/publisher/upload</altDeploymentRepository>
+                </configuration>
+            </plugin>
 
 		</plugins>
 	</build>
+
+	<reporting>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>3.6.3</version>
+            </plugin>
+        </plugins>
+    </reporting>
+
+	<scm>
+        <connection>scm:git:git://github.com/wtx-labs/symfonia-erp-webapi-client-java.git</connection>
+        <developerConnection>scm:git:ssh://github.com/wtx-labs/symfonia-erp-webapi-client-java.git</developerConnection>
+        <url>https://github.com/wtx-labs/symfonia-erp-webapi-client-java</url>
+    </scm>
+
+    <issueManagement>
+        <system>GitHub</system>
+        <url>https://github.com/wtx-labs/symfonia-erp-webapi-client-java/issues</url>
+    </issueManagement>
+
+    <ciManagement>
+        <system>GitHub Actions</system>
+        <url>https://github.com/wtx-labs/symfonia-erp-webapi-client-java/actions</url>
+    </ciManagement>
+
+	<developers>
+		<developer>
+			<name>WTX Labs Team</name>
+			<organization>WTX Labs</organization>
+			<organizationUrl>https://github.com/wtx-labs</organizationUrl>
+		</developer>
+	</developers>
+
+	<profiles>
+        <profile>
+            <id>release</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-source-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>attach-sources</id>
+                                <goals>
+                                    <goal>jar-no-fork</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-javadoc-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>attach-javadocs</id>
+                                <goals>
+                                    <goal>jar</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-gpg-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>sign-artifacts</id>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>sign</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>https://opensource.org/licenses/MIT</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
 
 </project>
