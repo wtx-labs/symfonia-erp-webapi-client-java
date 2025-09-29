@@ -42,6 +42,7 @@ Ten klient API zapewnia interfejsy Java dla Symfonia WebAPI, umożliwiając pły
 - ✅ API stanów magazynowych
   - Pobieranie wszystkich stanów magazynowych
   - Pobieranie stanów magazynowych dla towaru
+  - Pobieranie zmian stanów magazynowych
 - ✅ API zamówień
   - Pobieranie szczegółów zamówienia
   - Pobieranie faktur dla zamówienia
