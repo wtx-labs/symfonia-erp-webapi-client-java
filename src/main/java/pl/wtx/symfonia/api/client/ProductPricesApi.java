@@ -88,7 +88,7 @@ public class ProductPricesApi {
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getOrderPricesCall(PriceOrderCriteria priceOrderCriteria, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getOrderPricesCall(@javax.annotation.Nonnull PriceOrderCriteria priceOrderCriteria, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -134,7 +134,7 @@ public class ProductPricesApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getOrderPricesValidateBeforeCall(PriceOrderCriteria priceOrderCriteria, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getOrderPricesValidateBeforeCall(@javax.annotation.Nonnull PriceOrderCriteria priceOrderCriteria, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'priceOrderCriteria' is set
         if (priceOrderCriteria == null) {
             throw new ApiException("Missing the required parameter 'priceOrderCriteria' when calling getOrderPrices(Async)");
@@ -158,7 +158,7 @@ public class ProductPricesApi {
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
      </table>
      */
-    public PriceOrderResult getOrderPrices(PriceOrderCriteria priceOrderCriteria) throws ApiException {
+    public PriceOrderResult getOrderPrices(@javax.annotation.Nonnull PriceOrderCriteria priceOrderCriteria) throws ApiException {
         ApiResponse<PriceOrderResult> localVarResp = getOrderPricesWithHttpInfo(priceOrderCriteria);
         return localVarResp.getData();
     }
@@ -177,7 +177,7 @@ public class ProductPricesApi {
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<PriceOrderResult> getOrderPricesWithHttpInfo(PriceOrderCriteria priceOrderCriteria) throws ApiException {
+    public ApiResponse<PriceOrderResult> getOrderPricesWithHttpInfo(@javax.annotation.Nonnull PriceOrderCriteria priceOrderCriteria) throws ApiException {
         okhttp3.Call localVarCall = getOrderPricesValidateBeforeCall(priceOrderCriteria, null);
         Type localVarReturnType = new TypeToken<PriceOrderResult>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -198,7 +198,7 @@ public class ProductPricesApi {
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getOrderPricesAsync(PriceOrderCriteria priceOrderCriteria, final ApiCallback<PriceOrderResult> _callback) throws ApiException {
+    public okhttp3.Call getOrderPricesAsync(@javax.annotation.Nonnull PriceOrderCriteria priceOrderCriteria, final ApiCallback<PriceOrderResult> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getOrderPricesValidateBeforeCall(priceOrderCriteria, _callback);
         Type localVarReturnType = new TypeToken<PriceOrderResult>(){}.getType();

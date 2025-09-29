@@ -29,7 +29,7 @@ import java.io.IOException;
 
 import pl.wtx.symfonia.api.client.model.ApiError;
 import pl.wtx.symfonia.api.client.model.InventoryState;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -211,7 +211,7 @@ public class InventoryStatesApi {
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getInventoryStatesByProductCall(String id, String code, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getInventoryStatesByProductCall(@javax.annotation.Nullable String id, @javax.annotation.Nullable String code, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -264,7 +264,7 @@ public class InventoryStatesApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getInventoryStatesByProductValidateBeforeCall(String id, String code, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getInventoryStatesByProductValidateBeforeCall(@javax.annotation.Nullable String id, @javax.annotation.Nullable String code, final ApiCallback _callback) throws ApiException {
         return getInventoryStatesByProductCall(id, code, _callback);
 
     }
@@ -285,7 +285,7 @@ public class InventoryStatesApi {
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
      </table>
      */
-    public List<InventoryState> getInventoryStatesByProduct(String id, String code) throws ApiException {
+    public List<InventoryState> getInventoryStatesByProduct(@javax.annotation.Nullable String id, @javax.annotation.Nullable String code) throws ApiException {
         ApiResponse<List<InventoryState>> localVarResp = getInventoryStatesByProductWithHttpInfo(id, code);
         return localVarResp.getData();
     }
@@ -306,7 +306,7 @@ public class InventoryStatesApi {
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<InventoryState>> getInventoryStatesByProductWithHttpInfo(String id, String code) throws ApiException {
+    public ApiResponse<List<InventoryState>> getInventoryStatesByProductWithHttpInfo(@javax.annotation.Nullable String id, @javax.annotation.Nullable String code) throws ApiException {
         okhttp3.Call localVarCall = getInventoryStatesByProductValidateBeforeCall(id, code, null);
         Type localVarReturnType = new TypeToken<List<InventoryState>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -329,7 +329,7 @@ public class InventoryStatesApi {
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getInventoryStatesByProductAsync(String id, String code, final ApiCallback<List<InventoryState>> _callback) throws ApiException {
+    public okhttp3.Call getInventoryStatesByProductAsync(@javax.annotation.Nullable String id, @javax.annotation.Nullable String code, final ApiCallback<List<InventoryState>> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getInventoryStatesByProductValidateBeforeCall(id, code, _callback);
         Type localVarReturnType = new TypeToken<List<InventoryState>>(){}.getType();
@@ -351,7 +351,7 @@ public class InventoryStatesApi {
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getInventoryStatesChangesCall(LocalDate date, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getInventoryStatesChangesCall(@javax.annotation.Nullable OffsetDateTime date, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -400,7 +400,7 @@ public class InventoryStatesApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getInventoryStatesChangesValidateBeforeCall(LocalDate date, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getInventoryStatesChangesValidateBeforeCall(@javax.annotation.Nullable OffsetDateTime date, final ApiCallback _callback) throws ApiException {
         return getInventoryStatesChangesCall(date, _callback);
 
     }
@@ -420,7 +420,7 @@ public class InventoryStatesApi {
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
      </table>
      */
-    public List<InventoryState> getInventoryStatesChanges(LocalDate date) throws ApiException {
+    public List<InventoryState> getInventoryStatesChanges(@javax.annotation.Nullable OffsetDateTime date) throws ApiException {
         ApiResponse<List<InventoryState>> localVarResp = getInventoryStatesChangesWithHttpInfo(date);
         return localVarResp.getData();
     }
@@ -440,7 +440,7 @@ public class InventoryStatesApi {
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<InventoryState>> getInventoryStatesChangesWithHttpInfo(LocalDate date) throws ApiException {
+    public ApiResponse<List<InventoryState>> getInventoryStatesChangesWithHttpInfo(@javax.annotation.Nullable OffsetDateTime date) throws ApiException {
         okhttp3.Call localVarCall = getInventoryStatesChangesValidateBeforeCall(date, null);
         Type localVarReturnType = new TypeToken<List<InventoryState>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -462,7 +462,7 @@ public class InventoryStatesApi {
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getInventoryStatesChangesAsync(LocalDate date, final ApiCallback<List<InventoryState>> _callback) throws ApiException {
+    public okhttp3.Call getInventoryStatesChangesAsync(@javax.annotation.Nullable OffsetDateTime date, final ApiCallback<List<InventoryState>> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getInventoryStatesChangesValidateBeforeCall(date, _callback);
         Type localVarReturnType = new TypeToken<List<InventoryState>>(){}.getType();

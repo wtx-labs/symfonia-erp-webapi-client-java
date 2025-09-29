@@ -208,7 +208,7 @@ public class SessionsApi {
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call openNewSessionCall(String deviceName, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call openNewSessionCall(@javax.annotation.Nonnull String deviceName, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -258,7 +258,7 @@ public class SessionsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call openNewSessionValidateBeforeCall(String deviceName, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call openNewSessionValidateBeforeCall(@javax.annotation.Nonnull String deviceName, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'deviceName' is set
         if (deviceName == null) {
             throw new ApiException("Missing the required parameter 'deviceName' when calling openNewSession(Async)");
@@ -282,7 +282,7 @@ public class SessionsApi {
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
      </table>
      */
-    public String openNewSession(String deviceName) throws ApiException {
+    public String openNewSession(@javax.annotation.Nonnull String deviceName) throws ApiException {
         ApiResponse<String> localVarResp = openNewSessionWithHttpInfo(deviceName);
         return localVarResp.getData();
     }
@@ -301,7 +301,7 @@ public class SessionsApi {
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<String> openNewSessionWithHttpInfo(String deviceName) throws ApiException {
+    public ApiResponse<String> openNewSessionWithHttpInfo(@javax.annotation.Nonnull String deviceName) throws ApiException {
         okhttp3.Call localVarCall = openNewSessionValidateBeforeCall(deviceName, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -322,7 +322,7 @@ public class SessionsApi {
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call openNewSessionAsync(String deviceName, final ApiCallback<String> _callback) throws ApiException {
+    public okhttp3.Call openNewSessionAsync(@javax.annotation.Nonnull String deviceName, final ApiCallback<String> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = openNewSessionValidateBeforeCall(deviceName, _callback);
         Type localVarReturnType = new TypeToken<String>(){}.getType();

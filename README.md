@@ -62,7 +62,7 @@ Ten klient API zapewnia interfejsy Java dla Symfonia WebAPI, umożliwiając pły
 
 ## 📦 Informacje o wersji
 
-- **Aktualna wersja**: `0.1.2`
+- **Aktualna wersja**: `0.1.3`
 - **Wymagana wersja Java**: Java 17+
 
 ## 🔓 Licencja
@@ -83,7 +83,7 @@ Możesz dodać bibliotekę do swojego projektu, dołączając zależność z Mav
 <dependency>
     <groupId>pl.wtx.symfonia</groupId>
     <artifactId>symfonia-erp-webapi-client</artifactId>
-    <version>0.1.2</version>
+    <version>0.1.3</version>
 </dependency>
 ```
 
@@ -101,7 +101,7 @@ Następnie dodaj zbudowany artefakt do swojego projektu:
 <dependency>
     <groupId>pl.wtx.symfonia</groupId>
     <artifactId>symfonia-erp-webapi-client</artifactId>
-    <version>0.1.2</version>
+    <version>0.1.3</version>
 </dependency>
 ```
 

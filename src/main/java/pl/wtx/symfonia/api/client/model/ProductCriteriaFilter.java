@@ -48,7 +48,7 @@ import pl.wtx.symfonia.api.client.invoker.JSON;
 /**
  * ProductCriteriaFilter
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.13.0")
 public class ProductCriteriaFilter {
   public static final String SERIALIZED_NAME_CATALOG_ID = "CatalogId";
   @SerializedName(SERIALIZED_NAME_CATALOG_ID)

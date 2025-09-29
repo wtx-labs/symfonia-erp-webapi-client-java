@@ -91,7 +91,7 @@ public class ContractorsApi {
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getContractorsCall(String id, String code, String nip, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getContractorsCall(@javax.annotation.Nullable String id, @javax.annotation.Nullable String code, @javax.annotation.Nullable String nip, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -148,7 +148,7 @@ public class ContractorsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getContractorsValidateBeforeCall(String id, String code, String nip, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getContractorsValidateBeforeCall(@javax.annotation.Nullable String id, @javax.annotation.Nullable String code, @javax.annotation.Nullable String nip, final ApiCallback _callback) throws ApiException {
         return getContractorsCall(id, code, nip, _callback);
 
     }
@@ -171,7 +171,7 @@ public class ContractorsApi {
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
      </table>
      */
-    public List<Contractor> getContractors(String id, String code, String nip) throws ApiException {
+    public List<Contractor> getContractors(@javax.annotation.Nullable String id, @javax.annotation.Nullable String code, @javax.annotation.Nullable String nip) throws ApiException {
         ApiResponse<List<Contractor>> localVarResp = getContractorsWithHttpInfo(id, code, nip);
         return localVarResp.getData();
     }
@@ -194,7 +194,7 @@ public class ContractorsApi {
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<Contractor>> getContractorsWithHttpInfo(String id, String code, String nip) throws ApiException {
+    public ApiResponse<List<Contractor>> getContractorsWithHttpInfo(@javax.annotation.Nullable String id, @javax.annotation.Nullable String code, @javax.annotation.Nullable String nip) throws ApiException {
         okhttp3.Call localVarCall = getContractorsValidateBeforeCall(id, code, nip, null);
         Type localVarReturnType = new TypeToken<List<Contractor>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -219,7 +219,7 @@ public class ContractorsApi {
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getContractorsAsync(String id, String code, String nip, final ApiCallback<List<Contractor>> _callback) throws ApiException {
+    public okhttp3.Call getContractorsAsync(@javax.annotation.Nullable String id, @javax.annotation.Nullable String code, @javax.annotation.Nullable String nip, final ApiCallback<List<Contractor>> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getContractorsValidateBeforeCall(id, code, nip, _callback);
         Type localVarReturnType = new TypeToken<List<Contractor>>(){}.getType();

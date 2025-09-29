@@ -52,7 +52,7 @@ import pl.wtx.symfonia.api.client.invoker.JSON;
 /**
  * PingResponse
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.13.0")
 public class PingResponse {
   public static final String SERIALIZED_NAME_OPEN_SESSIONS_NUMBER = "OpenSessionsNumber";
   @SerializedName(SERIALIZED_NAME_OPEN_SESSIONS_NUMBER)

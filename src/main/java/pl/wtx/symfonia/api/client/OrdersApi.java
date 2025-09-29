@@ -88,7 +88,7 @@ public class OrdersApi {
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getInvoicesForOrderCall(String orderNumber, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getInvoicesForOrderCall(@javax.annotation.Nullable String orderNumber, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -137,7 +137,7 @@ public class OrdersApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getInvoicesForOrderValidateBeforeCall(String orderNumber, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getInvoicesForOrderValidateBeforeCall(@javax.annotation.Nullable String orderNumber, final ApiCallback _callback) throws ApiException {
         return getInvoicesForOrderCall(orderNumber, _callback);
 
     }
@@ -156,7 +156,7 @@ public class OrdersApi {
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
      </table>
      */
-    public List<OrderFV> getInvoicesForOrder(String orderNumber) throws ApiException {
+    public List<OrderFV> getInvoicesForOrder(@javax.annotation.Nullable String orderNumber) throws ApiException {
         ApiResponse<List<OrderFV>> localVarResp = getInvoicesForOrderWithHttpInfo(orderNumber);
         return localVarResp.getData();
     }
@@ -175,7 +175,7 @@ public class OrdersApi {
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<OrderFV>> getInvoicesForOrderWithHttpInfo(String orderNumber) throws ApiException {
+    public ApiResponse<List<OrderFV>> getInvoicesForOrderWithHttpInfo(@javax.annotation.Nullable String orderNumber) throws ApiException {
         okhttp3.Call localVarCall = getInvoicesForOrderValidateBeforeCall(orderNumber, null);
         Type localVarReturnType = new TypeToken<List<OrderFV>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -196,7 +196,7 @@ public class OrdersApi {
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getInvoicesForOrderAsync(String orderNumber, final ApiCallback<List<OrderFV>> _callback) throws ApiException {
+    public okhttp3.Call getInvoicesForOrderAsync(@javax.annotation.Nullable String orderNumber, final ApiCallback<List<OrderFV>> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getInvoicesForOrderValidateBeforeCall(orderNumber, _callback);
         Type localVarReturnType = new TypeToken<List<OrderFV>>(){}.getType();
@@ -217,7 +217,7 @@ public class OrdersApi {
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getOrderCall(String number, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getOrderCall(@javax.annotation.Nullable String number, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -266,7 +266,7 @@ public class OrdersApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getOrderValidateBeforeCall(String number, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getOrderValidateBeforeCall(@javax.annotation.Nullable String number, final ApiCallback _callback) throws ApiException {
         return getOrderCall(number, _callback);
 
     }
@@ -285,7 +285,7 @@ public class OrdersApi {
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
      </table>
      */
-    public Order getOrder(String number) throws ApiException {
+    public Order getOrder(@javax.annotation.Nullable String number) throws ApiException {
         ApiResponse<Order> localVarResp = getOrderWithHttpInfo(number);
         return localVarResp.getData();
     }
@@ -304,7 +304,7 @@ public class OrdersApi {
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Order> getOrderWithHttpInfo(String number) throws ApiException {
+    public ApiResponse<Order> getOrderWithHttpInfo(@javax.annotation.Nullable String number) throws ApiException {
         okhttp3.Call localVarCall = getOrderValidateBeforeCall(number, null);
         Type localVarReturnType = new TypeToken<Order>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -325,7 +325,7 @@ public class OrdersApi {
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getOrderAsync(String number, final ApiCallback<Order> _callback) throws ApiException {
+    public okhttp3.Call getOrderAsync(@javax.annotation.Nullable String number, final ApiCallback<Order> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getOrderValidateBeforeCall(number, _callback);
         Type localVarReturnType = new TypeToken<Order>(){}.getType();

@@ -91,7 +91,7 @@ public class ProductsApi {
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getProductDimensionsCall(String productId, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getProductDimensionsCall(@javax.annotation.Nullable String productId, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -140,7 +140,7 @@ public class ProductsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getProductDimensionsValidateBeforeCall(String productId, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getProductDimensionsValidateBeforeCall(@javax.annotation.Nullable String productId, final ApiCallback _callback) throws ApiException {
         return getProductDimensionsCall(productId, _callback);
 
     }
@@ -161,7 +161,7 @@ public class ProductsApi {
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
      </table>
      */
-    public List<Dimension> getProductDimensions(String productId) throws ApiException {
+    public List<Dimension> getProductDimensions(@javax.annotation.Nullable String productId) throws ApiException {
         ApiResponse<List<Dimension>> localVarResp = getProductDimensionsWithHttpInfo(productId);
         return localVarResp.getData();
     }
@@ -182,7 +182,7 @@ public class ProductsApi {
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<Dimension>> getProductDimensionsWithHttpInfo(String productId) throws ApiException {
+    public ApiResponse<List<Dimension>> getProductDimensionsWithHttpInfo(@javax.annotation.Nullable String productId) throws ApiException {
         okhttp3.Call localVarCall = getProductDimensionsValidateBeforeCall(productId, null);
         Type localVarReturnType = new TypeToken<List<Dimension>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -205,7 +205,7 @@ public class ProductsApi {
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getProductDimensionsAsync(String productId, final ApiCallback<List<Dimension>> _callback) throws ApiException {
+    public okhttp3.Call getProductDimensionsAsync(@javax.annotation.Nullable String productId, final ApiCallback<List<Dimension>> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getProductDimensionsValidateBeforeCall(productId, _callback);
         Type localVarReturnType = new TypeToken<List<Dimension>>(){}.getType();
@@ -229,7 +229,7 @@ public class ProductsApi {
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getProductsCall(String id, String barcode, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getProductsCall(@javax.annotation.Nullable String id, @javax.annotation.Nullable String barcode, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -282,7 +282,7 @@ public class ProductsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getProductsValidateBeforeCall(String id, String barcode, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getProductsValidateBeforeCall(@javax.annotation.Nullable String id, @javax.annotation.Nullable String barcode, final ApiCallback _callback) throws ApiException {
         return getProductsCall(id, barcode, _callback);
 
     }
@@ -304,7 +304,7 @@ public class ProductsApi {
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
      </table>
      */
-    public List<ProductListElement> getProducts(String id, String barcode) throws ApiException {
+    public List<ProductListElement> getProducts(@javax.annotation.Nullable String id, @javax.annotation.Nullable String barcode) throws ApiException {
         ApiResponse<List<ProductListElement>> localVarResp = getProductsWithHttpInfo(id, barcode);
         return localVarResp.getData();
     }
@@ -326,7 +326,7 @@ public class ProductsApi {
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<ProductListElement>> getProductsWithHttpInfo(String id, String barcode) throws ApiException {
+    public ApiResponse<List<ProductListElement>> getProductsWithHttpInfo(@javax.annotation.Nullable String id, @javax.annotation.Nullable String barcode) throws ApiException {
         okhttp3.Call localVarCall = getProductsValidateBeforeCall(id, barcode, null);
         Type localVarReturnType = new TypeToken<List<ProductListElement>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -350,7 +350,7 @@ public class ProductsApi {
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getProductsAsync(String id, String barcode, final ApiCallback<List<ProductListElement>> _callback) throws ApiException {
+    public okhttp3.Call getProductsAsync(@javax.annotation.Nullable String id, @javax.annotation.Nullable String barcode, final ApiCallback<List<ProductListElement>> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getProductsValidateBeforeCall(id, barcode, _callback);
         Type localVarReturnType = new TypeToken<List<ProductListElement>>(){}.getType();
@@ -371,7 +371,7 @@ public class ProductsApi {
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getProductsByFilterSqlCall(ProductCriteriaFilter productCriteriaFilter, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getProductsByFilterSqlCall(@javax.annotation.Nonnull ProductCriteriaFilter productCriteriaFilter, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -417,7 +417,7 @@ public class ProductsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getProductsByFilterSqlValidateBeforeCall(ProductCriteriaFilter productCriteriaFilter, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getProductsByFilterSqlValidateBeforeCall(@javax.annotation.Nonnull ProductCriteriaFilter productCriteriaFilter, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'productCriteriaFilter' is set
         if (productCriteriaFilter == null) {
             throw new ApiException("Missing the required parameter 'productCriteriaFilter' when calling getProductsByFilterSql(Async)");
@@ -441,7 +441,7 @@ public class ProductsApi {
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
      </table>
      */
-    public List<ProductListElement> getProductsByFilterSql(ProductCriteriaFilter productCriteriaFilter) throws ApiException {
+    public List<ProductListElement> getProductsByFilterSql(@javax.annotation.Nonnull ProductCriteriaFilter productCriteriaFilter) throws ApiException {
         ApiResponse<List<ProductListElement>> localVarResp = getProductsByFilterSqlWithHttpInfo(productCriteriaFilter);
         return localVarResp.getData();
     }
@@ -460,7 +460,7 @@ public class ProductsApi {
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<ProductListElement>> getProductsByFilterSqlWithHttpInfo(ProductCriteriaFilter productCriteriaFilter) throws ApiException {
+    public ApiResponse<List<ProductListElement>> getProductsByFilterSqlWithHttpInfo(@javax.annotation.Nonnull ProductCriteriaFilter productCriteriaFilter) throws ApiException {
         okhttp3.Call localVarCall = getProductsByFilterSqlValidateBeforeCall(productCriteriaFilter, null);
         Type localVarReturnType = new TypeToken<List<ProductListElement>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -481,7 +481,7 @@ public class ProductsApi {
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getProductsByFilterSqlAsync(ProductCriteriaFilter productCriteriaFilter, final ApiCallback<List<ProductListElement>> _callback) throws ApiException {
+    public okhttp3.Call getProductsByFilterSqlAsync(@javax.annotation.Nonnull ProductCriteriaFilter productCriteriaFilter, final ApiCallback<List<ProductListElement>> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getProductsByFilterSqlValidateBeforeCall(productCriteriaFilter, _callback);
         Type localVarReturnType = new TypeToken<List<ProductListElement>>(){}.getType();

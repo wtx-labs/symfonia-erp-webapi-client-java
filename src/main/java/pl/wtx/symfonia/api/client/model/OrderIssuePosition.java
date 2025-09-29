@@ -48,7 +48,7 @@ import pl.wtx.symfonia.api.client.invoker.JSON;
 /**
  * Klasa reprezentujaca informacje o pozycji dokumentu wykorzystywane do wystawienia zamowienia obcego.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.13.0")
 public class OrderIssuePosition {
   public static final String SERIALIZED_NAME_CODE = "Code";
   @SerializedName(SERIALIZED_NAME_CODE)

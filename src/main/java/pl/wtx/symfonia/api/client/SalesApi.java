@@ -92,7 +92,7 @@ public class SalesApi {
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getSaleDocumentCall(Integer id, String number, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getSaleDocumentCall(@javax.annotation.Nullable Integer id, @javax.annotation.Nullable String number, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -145,7 +145,7 @@ public class SalesApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getSaleDocumentValidateBeforeCall(Integer id, String number, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getSaleDocumentValidateBeforeCall(@javax.annotation.Nullable Integer id, @javax.annotation.Nullable String number, final ApiCallback _callback) throws ApiException {
         return getSaleDocumentCall(id, number, _callback);
 
     }
@@ -167,7 +167,7 @@ public class SalesApi {
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
      </table>
      */
-    public SaleDocument getSaleDocument(Integer id, String number) throws ApiException {
+    public SaleDocument getSaleDocument(@javax.annotation.Nullable Integer id, @javax.annotation.Nullable String number) throws ApiException {
         ApiResponse<SaleDocument> localVarResp = getSaleDocumentWithHttpInfo(id, number);
         return localVarResp.getData();
     }
@@ -189,7 +189,7 @@ public class SalesApi {
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<SaleDocument> getSaleDocumentWithHttpInfo(Integer id, String number) throws ApiException {
+    public ApiResponse<SaleDocument> getSaleDocumentWithHttpInfo(@javax.annotation.Nullable Integer id, @javax.annotation.Nullable String number) throws ApiException {
         okhttp3.Call localVarCall = getSaleDocumentValidateBeforeCall(id, number, null);
         Type localVarReturnType = new TypeToken<SaleDocument>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -213,7 +213,7 @@ public class SalesApi {
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getSaleDocumentAsync(Integer id, String number, final ApiCallback<SaleDocument> _callback) throws ApiException {
+    public okhttp3.Call getSaleDocumentAsync(@javax.annotation.Nullable Integer id, @javax.annotation.Nullable String number, final ApiCallback<SaleDocument> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getSaleDocumentValidateBeforeCall(id, number, _callback);
         Type localVarReturnType = new TypeToken<SaleDocument>(){}.getType();
@@ -238,7 +238,7 @@ public class SalesApi {
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getSalesByBuyerAndDateRangeCall(String buyerId, LocalDate dateFrom, LocalDate dateTo, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getSalesByBuyerAndDateRangeCall(@javax.annotation.Nullable String buyerId, @javax.annotation.Nullable LocalDate dateFrom, @javax.annotation.Nullable LocalDate dateTo, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -295,7 +295,7 @@ public class SalesApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getSalesByBuyerAndDateRangeValidateBeforeCall(String buyerId, LocalDate dateFrom, LocalDate dateTo, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getSalesByBuyerAndDateRangeValidateBeforeCall(@javax.annotation.Nullable String buyerId, @javax.annotation.Nullable LocalDate dateFrom, @javax.annotation.Nullable LocalDate dateTo, final ApiCallback _callback) throws ApiException {
         return getSalesByBuyerAndDateRangeCall(buyerId, dateFrom, dateTo, _callback);
 
     }
@@ -318,7 +318,7 @@ public class SalesApi {
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
      </table>
      */
-    public List<SaleDocumentListElement> getSalesByBuyerAndDateRange(String buyerId, LocalDate dateFrom, LocalDate dateTo) throws ApiException {
+    public List<SaleDocumentListElement> getSalesByBuyerAndDateRange(@javax.annotation.Nullable String buyerId, @javax.annotation.Nullable LocalDate dateFrom, @javax.annotation.Nullable LocalDate dateTo) throws ApiException {
         ApiResponse<List<SaleDocumentListElement>> localVarResp = getSalesByBuyerAndDateRangeWithHttpInfo(buyerId, dateFrom, dateTo);
         return localVarResp.getData();
     }
@@ -341,7 +341,7 @@ public class SalesApi {
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<SaleDocumentListElement>> getSalesByBuyerAndDateRangeWithHttpInfo(String buyerId, LocalDate dateFrom, LocalDate dateTo) throws ApiException {
+    public ApiResponse<List<SaleDocumentListElement>> getSalesByBuyerAndDateRangeWithHttpInfo(@javax.annotation.Nullable String buyerId, @javax.annotation.Nullable LocalDate dateFrom, @javax.annotation.Nullable LocalDate dateTo) throws ApiException {
         okhttp3.Call localVarCall = getSalesByBuyerAndDateRangeValidateBeforeCall(buyerId, dateFrom, dateTo, null);
         Type localVarReturnType = new TypeToken<List<SaleDocumentListElement>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -366,7 +366,7 @@ public class SalesApi {
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getSalesByBuyerAndDateRangeAsync(String buyerId, LocalDate dateFrom, LocalDate dateTo, final ApiCallback<List<SaleDocumentListElement>> _callback) throws ApiException {
+    public okhttp3.Call getSalesByBuyerAndDateRangeAsync(@javax.annotation.Nullable String buyerId, @javax.annotation.Nullable LocalDate dateFrom, @javax.annotation.Nullable LocalDate dateTo, final ApiCallback<List<SaleDocumentListElement>> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getSalesByBuyerAndDateRangeValidateBeforeCall(buyerId, dateFrom, dateTo, _callback);
         Type localVarReturnType = new TypeToken<List<SaleDocumentListElement>>(){}.getType();

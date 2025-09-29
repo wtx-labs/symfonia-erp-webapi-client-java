@@ -89,7 +89,7 @@ public class OrdersIssueApi {
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call addNewOrdersIssueCall(OrderIssue orderIssue, Boolean issue, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call addNewOrdersIssueCall(@javax.annotation.Nonnull OrderIssue orderIssue, @javax.annotation.Nullable Boolean issue, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -139,7 +139,7 @@ public class OrdersIssueApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call addNewOrdersIssueValidateBeforeCall(OrderIssue orderIssue, Boolean issue, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call addNewOrdersIssueValidateBeforeCall(@javax.annotation.Nonnull OrderIssue orderIssue, @javax.annotation.Nullable Boolean issue, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'orderIssue' is set
         if (orderIssue == null) {
             throw new ApiException("Missing the required parameter 'orderIssue' when calling addNewOrdersIssue(Async)");
@@ -164,7 +164,7 @@ public class OrdersIssueApi {
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
      </table>
      */
-    public Order addNewOrdersIssue(OrderIssue orderIssue, Boolean issue) throws ApiException {
+    public Order addNewOrdersIssue(@javax.annotation.Nonnull OrderIssue orderIssue, @javax.annotation.Nullable Boolean issue) throws ApiException {
         ApiResponse<Order> localVarResp = addNewOrdersIssueWithHttpInfo(orderIssue, issue);
         return localVarResp.getData();
     }
@@ -184,7 +184,7 @@ public class OrdersIssueApi {
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Order> addNewOrdersIssueWithHttpInfo(OrderIssue orderIssue, Boolean issue) throws ApiException {
+    public ApiResponse<Order> addNewOrdersIssueWithHttpInfo(@javax.annotation.Nonnull OrderIssue orderIssue, @javax.annotation.Nullable Boolean issue) throws ApiException {
         okhttp3.Call localVarCall = addNewOrdersIssueValidateBeforeCall(orderIssue, issue, null);
         Type localVarReturnType = new TypeToken<Order>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -206,7 +206,7 @@ public class OrdersIssueApi {
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call addNewOrdersIssueAsync(OrderIssue orderIssue, Boolean issue, final ApiCallback<Order> _callback) throws ApiException {
+    public okhttp3.Call addNewOrdersIssueAsync(@javax.annotation.Nonnull OrderIssue orderIssue, @javax.annotation.Nullable Boolean issue, final ApiCallback<Order> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = addNewOrdersIssueValidateBeforeCall(orderIssue, issue, _callback);
         Type localVarReturnType = new TypeToken<Order>(){}.getType();

@@ -48,7 +48,7 @@ import pl.wtx.symfonia.api.client.invoker.JSON;
 /**
  * SaleDocumentPosition
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.13.0")
 public class SaleDocumentPosition {
   public static final String SERIALIZED_NAME_PRODUCT_ID = "ProductId";
   @SerializedName(SERIALIZED_NAME_PRODUCT_ID)

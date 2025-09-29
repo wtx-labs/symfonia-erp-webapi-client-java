@@ -53,7 +53,7 @@ import pl.wtx.symfonia.api.client.invoker.JSON;
 /**
  * OrderIssue
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.13.0")
 public class OrderIssue {
   public static final String SERIALIZED_NAME_TYPE_CODE = "TypeCode";
   @SerializedName(SERIALIZED_NAME_TYPE_CODE)
