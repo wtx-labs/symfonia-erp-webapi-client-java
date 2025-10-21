@@ -32,6 +32,7 @@ Ten klient API zapewnia interfejsy Java dla Symfonia WebAPI, umożliwiając pły
 - ✅ API kontrahentów  
   - Lista/wyszukiwanie kontrahentów
   - Pobieranie szczegółów kontrahenta po ID, kodzie lub NIP
+  - Filtrowanie kontrahentów przy użyciu kryteriów SQL
 - ✅ API towarów
   - Lista/wyszukiwanie towarów
   - Pobieranie szczegółów towaru po ID lub kodzie kreskowym
@@ -168,6 +169,7 @@ Klient udostępnia następujące główne interfejsy API:
 
 ### API kontrahentów
 - `getContractors(id, code, nip)` - Pobranie informacji o kontrahencie
+- `getContractorsByFilterSql(contractorCriteriaFilter)` - Filtrowanie kontrahentów przy użyciu kryteriów SQL
 
 ### API towarów
 - `getProducts(id, barcode)` - Pobranie informacji o towarze
