@@ -50,37 +50,23 @@ import pl.wtx.symfonia.api.client.invoker.JSON;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.15.0")
 public class ContractorCriteriaFilter {
-  public static final String SERIALIZED_NAME_CATALOG_ID = "CatalogId";
-  @SerializedName(SERIALIZED_NAME_CATALOG_ID)
-  @javax.annotation.Nullable
-  private Integer catalogId;
-
   public static final String SERIALIZED_NAME_ACTIVE = "Active";
   @SerializedName(SERIALIZED_NAME_ACTIVE)
   @javax.annotation.Nullable
   private Boolean active;
 
+  public static final String SERIALIZED_NAME_CATALOG_ID = "CatalogId";
+  @SerializedName(SERIALIZED_NAME_CATALOG_ID)
+  @javax.annotation.Nullable
+  private Integer catalogId;
+
+  public static final String SERIALIZED_NAME_KIND_ID = "KindId";
+  @SerializedName(SERIALIZED_NAME_KIND_ID)
+  @javax.annotation.Nullable
+  private Integer kindId;
+
   public ContractorCriteriaFilter() {
   }
-
-  public ContractorCriteriaFilter catalogId(@javax.annotation.Nullable Integer catalogId) {
-    this.catalogId = catalogId;
-    return this;
-  }
-
-  /**
-   * Kryterium wyszukiwania po id katalogu kontrahenta. Jezeli wartosc bedzie pusta to kryterium wyszukiwania zostanie pominiete.
-   * @return catalogId
-   */
-  @javax.annotation.Nullable
-  public Integer getCatalogId() {
-    return catalogId;
-  }
-
-  public void setCatalogId(@javax.annotation.Nullable Integer catalogId) {
-    this.catalogId = catalogId;
-  }
-
 
   public ContractorCriteriaFilter active(@javax.annotation.Nullable Boolean active) {
     this.active = active;
@@ -101,6 +87,44 @@ public class ContractorCriteriaFilter {
   }
 
 
+  public ContractorCriteriaFilter catalogId(@javax.annotation.Nullable Integer catalogId) {
+    this.catalogId = catalogId;
+    return this;
+  }
+
+  /**
+   * Kryterium wyszukiwania po id katalogu kontrahenta. Jezeli wartosc bedzie pusta to kryterium wyszukiwania zostanie pominiete.
+   * @return catalogId
+   */
+  @javax.annotation.Nullable
+  public Integer getCatalogId() {
+    return catalogId;
+  }
+
+  public void setCatalogId(@javax.annotation.Nullable Integer catalogId) {
+    this.catalogId = catalogId;
+  }
+
+
+  public ContractorCriteriaFilter kindId(@javax.annotation.Nullable Integer kindId) {
+    this.kindId = kindId;
+    return this;
+  }
+
+  /**
+   * Kryterium wyszukiwania po id rodzaju kontrahenta. Jezeli wartosc bedzie pusta to kryterium wyszukiwania zostanie pominiete.
+   * @return kindId
+   */
+  @javax.annotation.Nullable
+  public Integer getKindId() {
+    return kindId;
+  }
+
+  public void setKindId(@javax.annotation.Nullable Integer kindId) {
+    this.kindId = kindId;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -111,21 +135,23 @@ public class ContractorCriteriaFilter {
       return false;
     }
     ContractorCriteriaFilter contractorCriteriaFilter = (ContractorCriteriaFilter) o;
-    return Objects.equals(this.catalogId, contractorCriteriaFilter.catalogId) &&
-        Objects.equals(this.active, contractorCriteriaFilter.active);
+    return Objects.equals(this.active, contractorCriteriaFilter.active) &&
+        Objects.equals(this.catalogId, contractorCriteriaFilter.catalogId) &&
+        Objects.equals(this.kindId, contractorCriteriaFilter.kindId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(catalogId, active);
+    return Objects.hash(active, catalogId, kindId);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ContractorCriteriaFilter {\n");
-    sb.append("    catalogId: ").append(toIndentedString(catalogId)).append("\n");
     sb.append("    active: ").append(toIndentedString(active)).append("\n");
+    sb.append("    catalogId: ").append(toIndentedString(catalogId)).append("\n");
+    sb.append("    kindId: ").append(toIndentedString(kindId)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -147,7 +173,7 @@ public class ContractorCriteriaFilter {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>(Arrays.asList("CatalogId", "Active"));
+    openapiFields = new HashSet<String>(Arrays.asList("Active", "CatalogId", "KindId"));
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>(0);
