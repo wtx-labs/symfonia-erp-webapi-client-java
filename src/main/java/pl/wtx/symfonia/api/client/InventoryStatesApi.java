@@ -337,7 +337,7 @@ public class InventoryStatesApi {
     }
     /**
      * Build call for getInventoryStatesChanges
-     * @param date Data od kiedy mają zostać pobrane zmiany. Data parametru powinna zostac podana w formacie ISO 8601 (np. 2025-09-29T16:00:00) (optional)
+     * @param date Data od kiedy mają zostać pobrane zmiany. Data parametru powinna zostac podana w formacie ISO 8601 (np. 2025-09-29T16:00:00). (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -407,7 +407,7 @@ public class InventoryStatesApi {
     /**
      * Metoda umozliwia pobranie stanow magazynowych i handlowych ktore zeminily sie od konkretenej daty.
      * 
-     * @param date Data od kiedy mają zostać pobrane zmiany. Data parametru powinna zostac podana w formacie ISO 8601 (np. 2025-09-29T16:00:00) (optional)
+     * @param date Data od kiedy mają zostać pobrane zmiany. Data parametru powinna zostac podana w formacie ISO 8601 (np. 2025-09-29T16:00:00). (optional)
      * @return List&lt;InventoryState&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -427,7 +427,7 @@ public class InventoryStatesApi {
     /**
      * Metoda umozliwia pobranie stanow magazynowych i handlowych ktore zeminily sie od konkretenej daty.
      * 
-     * @param date Data od kiedy mają zostać pobrane zmiany. Data parametru powinna zostac podana w formacie ISO 8601 (np. 2025-09-29T16:00:00) (optional)
+     * @param date Data od kiedy mają zostać pobrane zmiany. Data parametru powinna zostac podana w formacie ISO 8601 (np. 2025-09-29T16:00:00). (optional)
      * @return ApiResponse&lt;List&lt;InventoryState&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -448,7 +448,7 @@ public class InventoryStatesApi {
     /**
      * Metoda umozliwia pobranie stanow magazynowych i handlowych ktore zeminily sie od konkretenej daty. (asynchronously)
      * 
-     * @param date Data od kiedy mają zostać pobrane zmiany. Data parametru powinna zostac podana w formacie ISO 8601 (np. 2025-09-29T16:00:00) (optional)
+     * @param date Data od kiedy mają zostać pobrane zmiany. Data parametru powinna zostac podana w formacie ISO 8601 (np. 2025-09-29T16:00:00). (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
