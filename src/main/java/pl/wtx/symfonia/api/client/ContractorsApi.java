@@ -28,9 +28,9 @@ import java.io.IOException;
 
 
 import pl.wtx.symfonia.api.client.model.ApiError;
-import pl.wtx.symfonia.api.client.model.Contractor;
 import pl.wtx.symfonia.api.client.model.ContractorCriteriaFilter;
 import pl.wtx.symfonia.api.client.model.ContractorListElement;
+import pl.wtx.symfonia.api.client.model.GetContractors200Response;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -87,7 +87,7 @@ public class ContractorsApi {
      <table border="1">
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Zwraca kolekcje obiektow Contractor. </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Jeśli parametr &#39;id&#39; jest podany, zwracany jest pojedynczy obiekt Contractor. Jeśli parametr &#39;nip&#39; jest podany, zwracana jest lista obiektów Contractor.  </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
@@ -161,20 +161,20 @@ public class ContractorsApi {
      * @param id Identyfikator kontrahenta. (optional)
      * @param code Kod kontrahenta. (optional)
      * @param nip Identyfikator NIP kontrahenta. (optional)
-     * @return List&lt;Contractor&gt;
+     * @return GetContractors200Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Zwraca kolekcje obiektow Contractor. </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Jeśli parametr &#39;id&#39; jest podany, zwracany jest pojedynczy obiekt Contractor. Jeśli parametr &#39;nip&#39; jest podany, zwracana jest lista obiektów Contractor.  </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
      </table>
      */
-    public List<Contractor> getContractors(@javax.annotation.Nullable String id, @javax.annotation.Nullable String code, @javax.annotation.Nullable String nip) throws ApiException {
-        ApiResponse<List<Contractor>> localVarResp = getContractorsWithHttpInfo(id, code, nip);
+    public GetContractors200Response getContractors(@javax.annotation.Nullable String id, @javax.annotation.Nullable String code, @javax.annotation.Nullable String nip) throws ApiException {
+        ApiResponse<GetContractors200Response> localVarResp = getContractorsWithHttpInfo(id, code, nip);
         return localVarResp.getData();
     }
 
@@ -184,21 +184,21 @@ public class ContractorsApi {
      * @param id Identyfikator kontrahenta. (optional)
      * @param code Kod kontrahenta. (optional)
      * @param nip Identyfikator NIP kontrahenta. (optional)
-     * @return ApiResponse&lt;List&lt;Contractor&gt;&gt;
+     * @return ApiResponse&lt;GetContractors200Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Zwraca kolekcje obiektow Contractor. </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Jeśli parametr &#39;id&#39; jest podany, zwracany jest pojedynczy obiekt Contractor. Jeśli parametr &#39;nip&#39; jest podany, zwracana jest lista obiektów Contractor.  </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<Contractor>> getContractorsWithHttpInfo(@javax.annotation.Nullable String id, @javax.annotation.Nullable String code, @javax.annotation.Nullable String nip) throws ApiException {
+    public ApiResponse<GetContractors200Response> getContractorsWithHttpInfo(@javax.annotation.Nullable String id, @javax.annotation.Nullable String code, @javax.annotation.Nullable String nip) throws ApiException {
         okhttp3.Call localVarCall = getContractorsValidateBeforeCall(id, code, nip, null);
-        Type localVarReturnType = new TypeToken<List<Contractor>>(){}.getType();
+        Type localVarReturnType = new TypeToken<GetContractors200Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -215,16 +215,16 @@ public class ContractorsApi {
      <table border="1">
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Zwraca kolekcje obiektow Contractor. </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Jeśli parametr &#39;id&#39; jest podany, zwracany jest pojedynczy obiekt Contractor. Jeśli parametr &#39;nip&#39; jest podany, zwracana jest lista obiektów Contractor.  </td><td>  -  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getContractorsAsync(@javax.annotation.Nullable String id, @javax.annotation.Nullable String code, @javax.annotation.Nullable String nip, final ApiCallback<List<Contractor>> _callback) throws ApiException {
+    public okhttp3.Call getContractorsAsync(@javax.annotation.Nullable String id, @javax.annotation.Nullable String code, @javax.annotation.Nullable String nip, final ApiCallback<GetContractors200Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getContractorsValidateBeforeCall(id, code, nip, _callback);
-        Type localVarReturnType = new TypeToken<List<Contractor>>(){}.getType();
+        Type localVarReturnType = new TypeToken<GetContractors200Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
