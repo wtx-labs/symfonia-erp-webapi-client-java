@@ -102,6 +102,7 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new pl.wtx.symfonia.api.client.model.ContractorCriteriaFilter.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new pl.wtx.symfonia.api.client.model.ContractorListElement.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new pl.wtx.symfonia.api.client.model.Dimension.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new pl.wtx.symfonia.api.client.model.GetContractors200Response.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new pl.wtx.symfonia.api.client.model.InventoryState.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new pl.wtx.symfonia.api.client.model.LoadedModuleInfo.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new pl.wtx.symfonia.api.client.model.Order.CustomTypeAdapterFactory());
